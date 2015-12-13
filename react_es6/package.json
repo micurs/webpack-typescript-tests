@@ -4,7 +4,8 @@
   "description": "Simple example in ES6 react bundled with webpack",
   "main": "dist/bundle.js",
   "scripts": {
-    "start": "webpack"
+    "build": "webpack  --display-error-details --display-reasons --progress",
+    "start": "http-server -p 3000"
   },
   "author": "Michele Ursino",
   "license": "MIT",
