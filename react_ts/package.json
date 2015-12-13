@@ -1,0 +1,20 @@
+{
+  "name": "react_ts",
+  "version": "1.0.0",
+  "description": "Example using webpack with TS and react",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server -p 3000 -c-1"
+  },
+  "author": "Michele Ursino",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  },
+  "devDependencies": {
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.3"
+  }
+}

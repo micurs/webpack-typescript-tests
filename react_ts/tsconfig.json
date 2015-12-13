@@ -1,0 +1,16 @@
+{
+  "files": [
+    "src/main.tsx",
+    "src/component.tsx"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "jsx": "react",
+    "outDir": "./dist",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
