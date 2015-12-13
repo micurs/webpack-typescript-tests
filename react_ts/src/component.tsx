@@ -30,7 +30,7 @@ export default class Todos extends React.Component<TodosProps,TodosState> {
     }
   }
 
-  handleReturn( e ) {
+  handleReturn( e : React.KeyboardEvent ) {
     if ( e.key == 'Enter' )
       this.handleAddTodo();
   }
@@ -46,7 +46,7 @@ export default class Todos extends React.Component<TodosProps,TodosState> {
   render() {
     return <div>
             <h2>Todos</h2>
-            <input type="text" value={this.state.nexttodo}
+            <input type="text" value={this.state.nexttodo} ref={ (i) => i && i.focus()}
                    onChange={this.handleChange.bind(this)} onKeyUp={this.handleReturn.bind(this)}/>
             <button onClick={this.handleAddTodo.bind(this)}>add</button>
             <ul>{this.renderTodos()}</ul>

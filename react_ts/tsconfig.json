@@ -8,6 +8,7 @@
     "target": "ES5",
     "jsx": "react",
     "outDir": "./dist",
+    "noImplicitAny": true,
     "sourceMap": true
   },
   "exclude": [
