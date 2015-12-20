@@ -1,17 +1,15 @@
 {
-  "files": [
-    "src/main.tsx",
-    "src/component.tsx"
-  ],
   "compilerOptions": {
     "module": "commonjs",
-    "target": "ES5",
+    "target": "es5",
+    "moduleResolution": "node",
     "jsx": "react",
     "outDir": "./dist",
     "noImplicitAny": true,
     "sourceMap": true
   },
-  "exclude": [
-    "node_modules"
+  "files": [
+    "src/main.tsx",
+    "src/component.tsx"
   ]
 }

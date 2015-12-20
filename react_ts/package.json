@@ -4,6 +4,7 @@
   "description": "Example using webpack with TS and react",
   "main": "main.js",
   "scripts": {
+    "build": "webpack -v",
     "start": "http-server -p 3000 -c-1"
   },
   "author": "Michele Ursino",

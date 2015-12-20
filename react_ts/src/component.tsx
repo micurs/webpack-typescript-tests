@@ -35,8 +35,8 @@ export default class Todos extends React.Component<TodosProps,TodosState> {
       this.handleAddTodo();
   }
 
-  handleChange( e ) {
-    this.setState({ nexttodo: e.target.value });
+  handleChange( e: React.FormEvent ) {
+    this.setState({ nexttodo: (e.target as any).value });
   }
 
   renderTodos() {
