@@ -1,0 +1,27 @@
+{
+  "name": "mobx-react1",
+  "version": "1.0.0",
+  "description": "Simple React example using mobx",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -v",
+    "watch": "webpack --watch",
+    "start": "http-server -p 3000 -c-1"
+  },
+  "author": "Michele Ursino",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.15.0",
+    "mobx": "^2.4.4",
+    "mobx-react": "^3.5.5",
+    "mobx-react-devtools": "^4.2.5",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "jsx": "react",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true,
+        "sourceRoot": "src",
+        "outDir": "dist",
+        "experimentalDecorators": true
+    },
+    "files": [
+        "./src/main.tsx"
+    ]
+}
