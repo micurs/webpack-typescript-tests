@@ -36,12 +36,22 @@ class Todos extends React.Component<TodosProps,{}> {
     this.inputvalue = '';
   }
 
+  handleAddOnReturn( e ) {
+    if ( e.which === 13 ) {
+      this.handleAdd();
+    }
+  }
+
+      // <span>: &raquo; </span>
+      // {!t.isdone?<button onClick={() => t.isdone=true }>do it!</button>:<span>done</span>}
+
   renderTodo( t: Task ) {
     return <li key={t.id}>
+      <input type="checkbox" checked={t.isdone} onChange={ () => t.isdone = !t.isdone }/>
       {t.name}
-      <span>: &raquo; </span>
-      {!t.isdone?<button onClick={() => t.isdone=true }>do it!</button>:<span>done</span>}
-    </li>
+      { t.isdone? <small><em> congrats!</em></small> : <span/> }
+    </li>;
+
   }
 
   render() {
@@ -50,7 +60,7 @@ class Todos extends React.Component<TodosProps,{}> {
     return <div>
       <h3>Todos list</h3>
       <ul>{outli}</ul>
-      <input type="text" value={this.inputvalue} onChange={ (e) => this.inputvalue = e.target.value } />
+      <input type="text" value={this.inputvalue} onKeyPress={this.handleAddOnReturn.bind(this)} onChange={ (e) => this.inputvalue = e.target.value } />
       <button onClick={this.handleAdd.bind(this)}>Add</button>
     </div>;
   }
