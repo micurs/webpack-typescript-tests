@@ -6,6 +6,7 @@ import * as ReactDOM from 'react-dom';
 import {observable, reaction } from 'mobx';
 import {observer} from 'mobx-react';
 
+
 interface Task {
   id: number;
   name: string;
@@ -18,7 +19,7 @@ interface TodosProps {
   list: Task[];
 }
 
-// This is our component that need to react to changes in the application STATE => is observer
+// This component needs to react to changes in the application STATE => it is the observer
 @observer
 class Todos extends React.Component<TodosProps,{}> {
 
@@ -28,9 +29,8 @@ class Todos extends React.Component<TodosProps,{}> {
     super(p);
   }
 
-  // This is an action changing the application state.
+  // This is an action changing the application state directly.
   handleAdd() {
-    // const textInput = document.getElementById('val') as HTMLInputElement ;
     console.log(this.inputvalue);
     this.props.list.push({ id: counter++, name: this.inputvalue, isdone: false});
     this.inputvalue = '';
@@ -41,9 +41,6 @@ class Todos extends React.Component<TodosProps,{}> {
       this.handleAdd();
     }
   }
-
-      // <span>: &raquo; </span>
-      // {!t.isdone?<button onClick={() => t.isdone=true }>do it!</button>:<span>done</span>}
 
   renderTodo( t: Task ) {
     return <li key={t.id}>
@@ -70,7 +67,7 @@ class Todos extends React.Component<TodosProps,{}> {
 
 let counter = 0;
 
-// This is our application STATE => is observable
+// This is our application STATE => it is the observable
 const list = observable([
   { id: counter++, name: 'test1', isdone: false },
   { id: counter++, name: 'test2', isdone: true }
