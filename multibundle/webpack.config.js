@@ -3,6 +3,8 @@
 
 var path = require('path');
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+var UglifyJsPlugin = require("webpack/lib/optimize/UglifyJsPlugin");
+var SourceMapDevToolPlugin = require("webpack/lib/SourceMapDevToolPlugin");
 
 module.exports = {
   context: __dirname ,
@@ -29,7 +31,7 @@ module.exports = {
   plugins: [
     new CommonsChunkPlugin({
         name: "common",
-        chunks: [ "common", "pagea", "pageb" ]
-    })
+    }),
+    new UglifyJsPlugin()
   ]
 }
